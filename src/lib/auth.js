@@ -6,6 +6,11 @@ const client = new MongoClient(process.env.BETTER_AUTH_DB_URL);
 const db = client.db();
 
 export const auth = betterAuth({
+
+     emailAndPassword: { 
+    enabled: true, 
+  },
+  
   database: mongodbAdapter(db, {
    
     client
